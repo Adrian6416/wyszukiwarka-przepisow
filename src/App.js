@@ -5,7 +5,6 @@ import RecipeList from './components/RecipeList';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import './App.css';
 
-// Stworzenie tematu
 const theme = createTheme({
   palette: {
     primary: {
@@ -21,8 +20,8 @@ function App() {
   const [recipes, setRecipes] = useState([]);
 
   const fetchRecipes = async (query) => {
-    const appId = 'da85af3a'; // Twoje APP ID
-    const appKey = '4dca0f210902c89ad1ba7220a945f162'; // Twój APP KEY
+    const appId = 'da85af3a';
+    const appKey = '4dca0f210902c89ad1ba7220a945f162';
 
     try {
       const response = await fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${appId}&app_key=${appKey}`);
